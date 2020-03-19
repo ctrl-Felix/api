@@ -11,7 +11,7 @@ async def read_root():
 
 @app.get("/chat/check")
 def registernewuser(uuid: str, name: str):
-    db = mysql.connect(host="localhost",user='chat', password='nmoinuoiBIZvtZ', database='chat')
+    db = mysql.connect(host="localhost",user='chat', password='placeholder', database='chat')
     cursor = db.cursor()
     cursor.execute("SELECT * FROM chatuser WHERE uuid=%s", (uuid,))
     result = cursor.fetchall()
